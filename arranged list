@@ -1,0 +1,24 @@
+def main():
+    # Prompt the user to enter names
+    names = input("Enter names separated by commas: ")
+    
+    # Split the input string into a list of names and strip any whitespace
+    name_list = [name.strip() for name in names.split(',')]
+    
+    # Remove duplicates by converting the list to a set, then back to a list
+    unique_names = list(set(name_list))
+    
+    # Sort the names in alphabetical order
+    unique_names.sort()
+    
+    # Display the final sorted list
+    print("\nSorted Names No Duplicates:")
+    for name in unique_names:
+        print(name)
+    
+    # Count and print the total number of names entered
+    total_names = len(name_list)
+    print(f"\nTotal number of names entered: {total_names}")
+
+if __name__ == "__main__":
+    main()
